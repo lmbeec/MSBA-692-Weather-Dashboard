@@ -571,9 +571,9 @@ def render_severe_weather(df, alerts_df):
         fig_alerts.update_layout(**PLOT_LAYOUT,
             title=dict(text="Severe Weather Alert Timeline", font=dict(color=TEXT_DIM, size=13)),
             height=280,
-            yaxis=dict(gridcolor="#1e3a5f", categoryorder="array",
-                       categoryarray=["FREEZE", "HEAT", "PRECIP", "WIND"]),
         )
+        fig_alerts.update_yaxes(gridcolor="#1e3a5f", categoryorder="array",
+                                categoryarray=["FREEZE", "HEAT", "PRECIP", "WIND"])
 
         # Alert table
         table_rows = []
